@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class CreateSceneButtons : MonoBehaviour
 {
+    public List<string> runTimeScenes = new List<string>();
+
     // Where to place the button
     public Transform spawnButtonAt;
     // The button to place
@@ -27,6 +29,9 @@ public class CreateSceneButtons : MonoBehaviour
 
     void GenerateSceneButtons()
     {
+
+        // The editor build settings can only be used in editor...who would have thought?
+#if UNITY_EDITOR
         // Make a button for each scene in File -> Build Settings
         foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
         {
@@ -38,6 +43,20 @@ public class CreateSceneButtons : MonoBehaviour
                 // Make the button say which scene it is
                 sceneButton.GetComponentInChildren<TextMeshProUGUI>().text = GetSceneName(scene.path);
                 sceneButton.GetComponent<Button>().onClick.AddListener(() => LoadScene(scene.path));
+            }
+        }
+#endif
+
+        // If you typed in some scenes into the run time scene list, let's make them from that
+        if (runTimeScenes.Count > 0)
+        {
+            foreach (string scene in runTimeScenes)
+            {
+                // Create the button at the proper transform (in our scroll view content)
+                sceneButton = Instantiate(buttonPrefab, spawnButtonAt);
+                // Make the button say which scene it is
+                sceneButton.GetComponentInChildren<TextMeshProUGUI>().text = GetSceneName(scene);
+                sceneButton.GetComponent<Button>().onClick.AddListener(() => LoadScene(scene));
             }
         }
     }
