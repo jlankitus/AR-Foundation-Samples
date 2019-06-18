@@ -17,17 +17,13 @@ public class CreateSceneButtons : MonoBehaviour
     // The instance of the individually spawned button(s)
     GameObject sceneButton;
 
-    // This is the only thing I do
-    // Wake up [load scene] 
-    // Pass out [load scene]
-    // Faded [load scene]
-
     private void Start()
     {
-        GenerateSceneButtons();
+        GenerateRuntimeSceneButtons();
     }
 
-    void GenerateSceneButtons()
+    [ContextMenu("Generate Scene Buttons")]
+    public void GenerateSceneButtons()
     {
 
         // The editor build settings can only be used in editor...who would have thought?
@@ -46,7 +42,10 @@ public class CreateSceneButtons : MonoBehaviour
             }
         }
 #endif
+    }
 
+    public void GenerateRuntimeSceneButtons()
+    {
         // If you typed in some scenes into the run time scene list, let's make them from that
         if (runTimeScenes.Count > 0)
         {

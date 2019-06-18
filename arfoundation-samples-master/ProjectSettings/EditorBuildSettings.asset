@@ -36,13 +36,13 @@ EditorBuildSettings:
     path: Assets/Scenes/LightEstimation.unity
     guid: 2f0cbc82480584c258f99f0d9e4ba302
   - enabled: 1
-    path: Assets/Scenes/Object Tracking/ObjectTracking.unity
+    path: Assets/Scenes/ObjectTracking/ObjectTracking.unity
     guid: 8f797cefb98fe43109524cbbcc8faafc
   - enabled: 1
-    path: Assets/Scenes/Plane Detection/FeatheredPlanes.unity
+    path: Assets/Scenes/PlaneDetection/FeatheredPlanes.unity
     guid: 8252358a1e2ba7549a94df43aacec984
   - enabled: 1
-    path: Assets/Scenes/Plane Detection/TogglePlaneDetection.unity
+    path: Assets/Scenes/PlaneDetection/TogglePlaneDetection.unity
     guid: eb4bbb3a5e81acc41a903b1c5f1c827b
   - enabled: 1
     path: Assets/Scenes/Scale.unity

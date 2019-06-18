@@ -337,9 +337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 363156794}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 0
+  m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -691,8 +691,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runTimeScenes:
-  - Assets/Scenes/FaceTracking
-  - Assets/Scenes/ARWorldMap
+  - Scenes/FaceTracking/FaceMesh
+  - Scenes/FaceTracking/FacePose
+  - Scenes/ARWorldMap
+  - Scenes/CameraImage
+  - Scenes/EnvironmentProbes
+  - Scenes/LightEstimation
+  - Scenes/SimpleAR
+  - Scenes/Scale
+  - Scenes/PlaneDetection/FeatheredPlanes
+  - Scenes/PlaneDetection/TogglePlaneDetection
   spawnButtonAt: {fileID: 363156794}
   buttonPrefab: {fileID: 7900069679263733579, guid: 2679a7ad714ab410d89d78c67ec1721a,
     type: 3}
