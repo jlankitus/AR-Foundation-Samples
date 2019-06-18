@@ -25,7 +25,6 @@ public class CreateSceneButtons : MonoBehaviour
     [ContextMenu("Generate Scene Buttons")]
     public void GenerateSceneButtons()
     {
-
         // The editor build settings can only be used in editor...who would have thought?
 #if UNITY_EDITOR
         // Make a button for each scene in File -> Build Settings
